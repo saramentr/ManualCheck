@@ -31,7 +31,7 @@ while True:
       if not os.path.exists(prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4]):
         print("error clone repo https://github.com/"+sepListTmp[3]+"/"+sepListTmp[4]+".git ")
         continue
-      os.system("whoami")
+# fix not work without full path $PATH  user runner
       os.system("~/sonar-scanner-4.6.1.2450-linux/bin/sonar-scanner -Dsonar.projectKey="+sepListTmp[0]+" -Dsonar.sources="+prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4]+" -Dsonar.host.url="+sepListTmp[1] +" -Dsonar.login="+sepListTmp[2])
 # fix time to 1000  
   time.sleep(100)
