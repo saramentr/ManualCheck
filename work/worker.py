@@ -4,7 +4,7 @@ import shutil
 
 pathGenGit = "/tmp/gengit"
 prePathWorkGit = "/tmp/workgit"
-pathToList = os.getcwd()+"/work/listProjects"
+pathToList = pathGenGit+"/work/listProjects"
 repoToList = "https://github.com/saramentr/ManualCheck.git"
 
 while True:
