@@ -27,9 +27,9 @@ while True:
         continue
       if os.path.exists(prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4]):
         continue
-      os.system("git clone https://github.com/"+sepListTmp[3]+"/"+sepListTMp[4]+".git "+prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4])
+      os.system("git clone https://github.com/"+sepListTmp[3]+"/"+sepListTmp[4]+".git "+prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4])
       if not os.path.exists(prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4]):
-        print("error clone repo https://github.com/"+sepListTmp[3]+"/"+sepListTMp[4]+".git ")
+        print("error clone repo https://github.com/"+sepListTmp[3]+"/"+sepListTmp[4]+".git ")
         continue
       os.system("sonar-scanner -Dsonar.projectKey="+sepListTmp[0]+" -Dsonar.sources="+prePathWorkGit+"/"+sepListTmp[3]+"_"+sepListTmp[4]+" -Dsonar.host.url="+sepListTmp[1] +" -Dsonar.login="+sepListTmp[2])
 # fix time to 1000  
