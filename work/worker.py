@@ -21,7 +21,7 @@ while True:
 #file pathToList format
 # prjkey_:_urlPort_:_prjlgn_:_organ_:_repo
     for i in listWorkLine:
-      sepListTmp = i.split("_:_")
+      sepListTmp = i.splitlines()[0].split("_:_")
       if len(sepListTmp) != 5:
         print("error parsing line "+i)
         continue
